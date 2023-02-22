@@ -1,13 +1,18 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  padding: 10px 15px;
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f2f5f7;
+  background-color: transparent;
+  border: 1px solid #f2f5f7;
+  border-radius: 3px;
   cursor: pointer;
-
   transition: opacity $trans-default;
 
   &--red {
@@ -16,7 +21,6 @@
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 

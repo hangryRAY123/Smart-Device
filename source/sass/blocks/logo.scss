@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+}
+
+.logo__img {
+  margin-right: 15px;
+}
+
+.logo b {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  display: block;
+  color: #f2f5f7;
+}
+
+.logo span {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+}

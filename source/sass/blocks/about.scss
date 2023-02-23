@@ -1,0 +1,82 @@
+.about {
+  background: #f8fdff;
+  color: $color-default-black;
+  padding-bottom: 120px;
+
+  @include vp-1219 {
+    padding-bottom: 80px;
+  }
+}
+
+.about__wrapper {
+  margin-left: 250px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 320px;
+    top: 0;
+    left: 0;
+    background-image: image-set(
+      url("../../img/year.png") 1x,
+      url("../../img/year.webp") 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include retina {
+      background-image: image-set(
+        url("../../img/year@2x.png") 2x,
+        url("../../img/year@2x.webp") 2x
+      );
+    }
+
+    @include vp-769 {
+      display: none;
+    }
+  }
+
+  @include vp-1219 {
+    margin-left: 175px;
+  }
+
+  @include vp-769 {
+    margin-left: 0;
+  }
+}
+
+.about__inner {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.about__inner p {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about h2 {
+  color: $color-dark;
+
+  @include vp-769 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about p {
+  @include vp-769 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about button {
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+}

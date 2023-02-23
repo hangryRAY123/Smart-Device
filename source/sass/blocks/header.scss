@@ -4,8 +4,13 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: $color-default-black;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   color: $color-default-white;
+
+  @include vp-1219 {
+    position: absolute;
+  }
 }
 
 .header__wrapper {
@@ -13,6 +18,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  @include vp-1219 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-769 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.header__wrapper button {
+  @include vp-1219 {
+    display: none;
+  }
 }
 
 .header__contacts {
@@ -22,8 +45,15 @@
 }
 
 .header__item {
-  min-width: 189px;
   margin-right: 63px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include vp-1219 {
+    margin-right: 20px;
+  }
 }
 
 .header__link {
@@ -32,5 +62,19 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #f2f5f7;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+
+  @include vp-1219 {
+    padding: 10px;
+  }
+}
+
+.header__link-text {
+  margin-left: 15px;
+
+  @include vp-1219 {
+    display: none;
+  }
 }

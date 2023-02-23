@@ -1,0 +1,158 @@
+.services {
+  background-color: #041827;
+  color: $color-default-white;
+  padding-top: 70px;
+  padding-bottom: 140px;
+
+  @include vp-1219 {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-769 {
+    padding-top: 50px;
+    padding-bottom: 86px;
+  }
+}
+
+.services h2 {
+  margin-bottom: 50px;
+
+  @include vp-769 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1219 {
+    flex-direction: column;
+  }
+}
+
+.services__item {
+  margin-right: auto;
+  background-image: image-set(
+    url("../../img/services-bg.jpg") 1x,
+    url("../../img/services-bg.webp") 1x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: image-set(
+      url("../../img/services-bg@2x.jpg") 2x,
+      url("../../img/services-bg@2x.webp") 2x
+    );
+  }
+
+  &--production {
+    background-position: 15% 0;
+
+    @include vp-1219 {
+      background-position: 35% 100%;
+      background-size: auto 300%;
+    }
+
+    @include vp-769 {
+      background-position: 30% 50%;
+    }
+  }
+
+  &--installation {
+    background-position: 50% 0;
+
+    @include vp-1219 {
+      background-position: 80% 50%;
+      background-size: auto 300%;
+    }
+
+    @include vp-769 {
+      background-position: 30% 100%;
+    }
+  }
+
+  &--accessories {
+    background-position: 80% 0;
+
+    @include vp-1219 {
+      background-position: 20% 70%;
+      background-size: auto 300%;
+    }
+
+    @include vp-769 {
+      background-position: 70% 70%;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @include vp-1219 {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.services__link {
+  position: relative;
+  padding: 50px 40px;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+  height: 650px;
+  width: 350px;
+  background-color: rgba(4, 24, 39, 0.5);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: #00b2ff;
+    border-radius: 3px 0px 0px 0px;
+    bottom: 0;
+    right: 0;
+    background-image: url("../../img/svg/jump.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include vp-769 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include vp-1219 {
+    padding: 40px 45px;
+    height: 250px;
+    width: 100%;
+  }
+
+  @include vp-769 {
+    padding: 30px;
+    font-size: 18px;
+  }
+}
+
+.services__title-mobile {
+  display: none;
+
+  @include vp-769 {
+    display: block;
+  }
+}
+
+.services__title-tablet {
+  @include vp-769 {
+    display: none;
+  }
+}

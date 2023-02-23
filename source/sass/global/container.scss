@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
@@ -8,7 +9,7 @@
     padding: 0 50px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding: 0 25px;
   }
 }

@@ -2,20 +2,31 @@
   display: flex;
 }
 
-.logo__img {
+.logo svg {
   margin-right: 15px;
+
+  @include vp-769 {
+    width: 35px;
+    height: 35px;
+  }
 }
 
-.logo b {
+.logo__text {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.logo__text b {
   font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
   display: block;
-  color: #f2f5f7;
+  color: $color-light;
 }
 
-.logo span {
+.logo__text span {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 12px;

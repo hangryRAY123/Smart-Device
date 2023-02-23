@@ -19,13 +19,7 @@
         <div class="header__wrapper container">
           <a class="logo" href="index.html">
             <span class="visually-hidden">Логотип Smart Device.</span>
-            <svg
-              class="logo__img"
-              aria-hidden="true"
-              focusable="false"
-              width="55"
-              height="55"
-            >
+            <svg aria-hidden="true" focusable="false" width="55" height="55">
               <use href="img/sprite.svg#logo"></use>
             </svg>
             <div class="logo__text">
@@ -35,11 +29,31 @@
           </a>
           <ul class="header__contacts">
             <li class="header__item">
-              <a class="header__link" href="mailto:info@sd.ru">info@sd.ru</a>
+              <a class="header__link" href="mailto:info@sd.ru">
+                <span class="visually-hidden">Почта.</span>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                >
+                  <use href="img/sprite.svg#email"></use>
+                </svg>
+                <span class="header__link-text">info@sd.ru</span></a
+              >
             </li>
             <li class="header__item">
-              <a class="header__link" href="tel:+74950005252"
-                >+7 (495) 000 52 52</a
+              <a class="header__link" href="tel:+74950005252">
+                <span class="visually-hidden">Телефон.</span>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                >
+                  <use href="img/sprite.svg#phone-call"></use>
+                </svg>
+                <span class="header__link-text">+7 (495) 000 52 52</span></a
               >
             </li>
           </ul>
@@ -51,16 +65,23 @@
       <main>
         <!-- Интро -->
 
-        <section class="intro">
-          <div class="container">
-            <h1 class="title">Печатные платы</h1>
-            <p class="description">
-              производство и&nbsp;монтаж, поставка комплектующих, блоков
-              и&nbsp;модулей
-            </p>
-            <button class="btn" type="button">
-              Получить бесплатную консультацию
-            </button>
+        <section class="entry">
+          <div class="entry__wrapper">
+            <div class="container">
+              <div class="entry__inner">
+                <h1 class="title">Печатные платы</h1>
+                <p class="description">
+                  производство и&nbsp;монтаж, поставка комплектующих, блоков
+                  и&nbsp;модулей
+                </p>
+                <button class="btn" type="button">
+                  <span class="entry__btn-tablet"
+                    >Получить бесплатную консультацию</span
+                  >
+                  <span class="entry__btn-mobile">Бесплатная консультация</span>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -71,6 +92,15 @@
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="advantages__list">
               <li class="advantages__item">
+                <svg
+                  class="advantages__svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="35"
+                  height="35"
+                >
+                  <use href="img/sprite.svg#stopwatch"></use>
+                </svg>
                 <h3 class="title">Оперативные сроки</h3>
                 <p class="description">
                   Усовершенствованная логистическая система позволяет нам
@@ -79,6 +109,15 @@
                 </p>
               </li>
               <li class="advantages__item">
+                <svg
+                  class="advantages__svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="35"
+                  height="35"
+                >
+                  <use href="img/sprite.svg#hired"></use>
+                </svg>
                 <h3 class="title">Крупные поставщики</h3>
                 <p class="description">
                   Нашими поставщиками являются такие крупные мировые компании
@@ -88,6 +127,15 @@
                 </p>
               </li>
               <li class="advantages__item">
+                <svg
+                  class="advantages__svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="35"
+                  height="35"
+                >
+                  <use href="img/sprite.svg#detective"></use>
+                </svg>
                 <h3 class="title">Полная конфиденциальность</h3>
                 <p class="description">
                   По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную
@@ -95,6 +143,15 @@
                 </p>
               </li>
               <li class="advantages__item">
+                <svg
+                  class="advantages__svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="35"
+                  height="35"
+                >
+                  <use href="img/sprite.svg#tag"></use>
+                </svg>
                 <h3 class="title">Персонализация стоимости</h3>
                 <p class="description">
                   Мы&nbsp;подбираем определенную фабрику, поставщиков, вид
@@ -110,19 +167,26 @@
 
         <section class="about">
           <div class="container">
-            <h2 class="title">О компании</h2>
-            <p class="description">
-              Мы&nbsp;поставляем электронные комплектующие, производим печатные
-              платы и&nbsp;предоставляем мировые технологии
-              с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные
-              образцы до&nbsp;10&nbsp;дней. Наши поставщики&nbsp;&mdash; мировые
-              производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
-              REFOND. Печатные платы и&nbsp;комплектующие Service Devices
-              применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
-              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
-              наших клиентов крупнейшие Производители светотехники России.
-            </p>
-            <button class="btn" type="button">Подробнее</button>
+            <div class="about__wrapper">
+              <h2 class="title">О компании</h2>
+              <div class="about__inner">
+                <p class="description">
+                  Мы&nbsp;поставляем электронные комплектующие, производим
+                  печатные платы и&nbsp;предоставляем мировые технологии
+                  с&nbsp;1997&nbsp;года. Выполняем срочные заказы
+                  и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+                </p>
+                <p class="description">
+                  Наши поставщики&nbsp;&mdash; мировые производители электронных
+                  компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы
+                  и&nbsp;комплектующие Service Devices применяются
+                  на&nbsp;предприятиях Российских Железных Дорог (РЖД),
+                  РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
+                  наших клиентов крупнейшие Производители светотехники России.
+                </p>
+              </div>
+              <button class="btn" type="button">Подробнее</button>
+            </div>
           </div>
         </section>
 
@@ -131,20 +195,30 @@
         <section class="services">
           <div class="container">
             <h2 class="title">
-              Smart Device предлагает следующие товары и&nbsp;услуги
+              <span class="services__title-tablet"
+                >Smart Device предлагает следующие товары и&nbsp;услуги</span
+              >
+              <span class="services__title-mobile"
+                >Товары и услуги Smart Device</span
+              >
             </h2>
             <ul class="services__list">
-              <li class="services__item">
+              <li class="services__item services__item--production">
                 <a href="#" class="services__link"
-                  >Производство печатных плат</a
+                  >Производство <br />
+                  печатных плат</a
                 >
               </li>
-              <li class="services__item">
-                <a href="#" class="services__link">Монтаж печатных плат</a>
-              </li>
-              <li class="services__item">
+              <li class="services__item services__item--installation">
                 <a href="#" class="services__link"
-                  >Комплектующие для светотехники</a
+                  >Монтаж <br />
+                  печатных плат</a
+                >
+              </li>
+              <li class="services__item services__item--accessories">
+                <a href="#" class="services__link"
+                  >Комплектующие <br />
+                  для светотехники</a
                 >
               </li>
             </ul>

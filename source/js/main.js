@@ -1,10 +1,53 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initAccordions} from './modules/modals/init-accordion';
+import {initPhoneMask} from './modules/modals/phone-mask';
 import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  const more = document.querySelector('[data-validate="btn-more"]');
+  const about = document.querySelector('[data-validate="about"]');
+  const name = document.querySelector('[data-validate="name"]');
+  const phone = document.querySelector('[data-open-modal="feedback"]');
+  const control = document.querySelector('[data-validate="control"]');
+  const submit = document.querySelector('[data-validate="submit"]');
+  const data = document.querySelector('[data-validate="data"]');
+  const modalControl = document.querySelector('[data-validate="modal-control"]');
+  const modalSubmit = document.querySelector('[data-validate="modal-submit"]');
+  const modalData = document.querySelector('[data-validate="modal-data"]');
+
+  modalControl.addEventListener('click', function () {
+    if (modalData.checked) {
+      modalSubmit.disabled = '';
+    } else {
+      modalSubmit.disabled = 'disabled';
+    }
+  });
+
+  control.addEventListener('click', function () {
+    if (data.checked) {
+      submit.disabled = '';
+    } else {
+      submit.disabled = 'disabled';
+    }
+  });
+
+  phone.addEventListener('click', function () {
+    setTimeout(function () {
+      name.focus();
+    }, 100);
+  });
+
+  more.addEventListener('click', function () {
+    if (about.classList.contains('about--more')) {
+      about.classList.remove('about--more');
+    } else {
+      about.classList.add('about--more');
+    }
+  });
+
 
   // Utils
   // ---------------------------------
@@ -17,7 +60,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initAccordions();
     initModals();
+    initPhoneMask();
     const form = new Form();
     window.form = form;
     form.init();

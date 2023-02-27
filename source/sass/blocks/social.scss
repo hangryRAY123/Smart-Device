@@ -1,0 +1,13 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
+}
+
+.social__item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

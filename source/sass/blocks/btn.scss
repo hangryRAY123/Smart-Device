@@ -5,7 +5,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #f2f5f7;
@@ -14,10 +14,6 @@
   border-radius: 3px;
   cursor: pointer;
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
 
   &:disabled {
     opacity: 0.5;

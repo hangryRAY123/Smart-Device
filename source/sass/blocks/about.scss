@@ -3,7 +3,7 @@
   color: $color-default-black;
   padding-bottom: 120px;
 
-  @include vp-1219 {
+  @include vp-1023 {
     padding-bottom: 80px;
   }
 }
@@ -33,23 +33,41 @@
       );
     }
 
-    @include vp-769 {
+    @include vp-767 {
       display: none;
     }
   }
 
-  @include vp-1219 {
+  @include vp-1023 {
     margin-left: 175px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-left: 0;
   }
 }
 
 .about__inner {
+  display: flex;
+  flex-direction: column;
   margin-top: 15px;
   margin-bottom: 20px;
+  max-height: 205px;
+  overflow: hidden;
+
+  @include vp-1023 {
+    max-height: 270px;
+  }
+
+  @include vp-767 {
+    max-height: 205px;
+  }
+}
+
+.about--more .about__inner {
+  max-height: 100%;
+  overflow: visible;
+  transition: 1s;
 }
 
 .about__inner p {
@@ -63,14 +81,14 @@
 .about h2 {
   color: $color-dark;
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 28px;
     line-height: 39px;
   }
 }
 
 .about p {
-  @include vp-769 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }
@@ -79,4 +97,16 @@
 .about button {
   border: 1px solid #00b2ff;
   color: #00b2ff;
+}
+
+.about__btn-collapse {
+  display: none;
+}
+
+.about--more .about__btn-collapse {
+  display: block;
+}
+
+.about--more .about__btn-more {
+  display: none;
 }

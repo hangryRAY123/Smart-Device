@@ -1,0 +1,42 @@
+.control {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+.control__name {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 5px;
+  top: 3px;
+  left: 2px;
+  background-image: url("../../img/svg/check.svg");
+}
+
+.control__input:disabled ~ span {
+  opacity: 0.1;
+  pointer-events: none;
+}

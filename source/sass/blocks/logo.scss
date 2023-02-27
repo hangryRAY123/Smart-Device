@@ -1,18 +1,29 @@
-.logo {
-  display: flex;
-}
-
 .logo svg {
   margin-right: 15px;
 
-  @include vp-769 {
+  @include vp-767 {
     width: 35px;
     height: 35px;
   }
 }
 
+.logo {
+  display: flex;
+
+  @include vp-767 {
+    &--footer svg {
+      width: 55px;
+      height: 55px;
+    }
+
+    &--footer .logo__text {
+      display: block;
+    }
+  }
+}
+
 .logo__text {
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }

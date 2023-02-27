@@ -4,11 +4,11 @@
   padding-top: 120px;
   padding-bottom: 125px;
 
-  @include vp-1219 {
+  @include vp-1023 {
     padding: 80px 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
    padding: 50px 0;
   }
 }
@@ -18,7 +18,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 
-  @include vp-769 {
+  @include vp-767 {
     grid-template-columns: 1fr;
   }
 }
@@ -55,11 +55,11 @@
     }
   }
 
-  @include vp-1219 {
+  @include vp-1023 {
     min-height: 360px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding: 30px 30px 35px 25px;
     min-height: 340px;
   }
@@ -68,7 +68,7 @@
 .advantages__svg {
   fill: #00b2ff;
 
-  @include vp-769 {
+  @include vp-767 {
     width: 30px;
     height: 30px;
   }
@@ -81,14 +81,14 @@
   margin-top: 20px;
   margin-bottom: 15px;
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 20px;
     line-height: 28px;
   }
 }
 
 .advantages__item p {
-  @include vp-769 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }

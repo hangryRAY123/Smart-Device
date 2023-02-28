@@ -2,24 +2,28 @@
   background-color: $color-dark;
   color: $color-default-white;
   padding-top: 70px;
-  padding-bottom: 140px;
+  padding-bottom: 110px;
 
   @include vp-1023 {
-    padding-top: 60px;
-    padding-bottom: 75px;
+    padding-top: 55px;
+    padding-bottom: 50px;
   }
 
   @include vp-767 {
-    padding-top: 50px;
-    padding-bottom: 86px;
+    padding-top: 45px;
+    padding-bottom: 55px;
   }
 }
 
 .services h2 {
   margin-bottom: 50px;
 
+  @include vp-1023 {
+    margin-bottom: 35px;
+  }
+
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 28px;
     line-height: 39px;
   }
@@ -43,6 +47,7 @@
   );
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 30px;
 
   @include retina {
     background-image: image-set(
@@ -92,16 +97,6 @@
     @include vp-767 {
       background-position: 70% 70%;
     }
-  }
-
-  &:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  @include vp-1023 {
-    margin-right: 0;
-    margin-bottom: 30px;
   }
 }
 

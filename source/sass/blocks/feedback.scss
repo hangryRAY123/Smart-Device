@@ -2,8 +2,8 @@
   position: relative;
   background-color: #00b3ff;
   color: $color-default-black;
-  padding-top: 170px;
-  padding-bottom: 250px;
+  padding-top: 165px;
+  padding-bottom: 247px;
 
   background-image: image-set(
     url("../../img/feedback-bg.jpg") 1x,
@@ -21,19 +21,20 @@
   }
 
   @include vp-1023 {
-    padding-top: 50px;
-    padding-bottom: 125px;
-    background-image: none;
+    padding-top: 45px;
+    padding-bottom: 120px;
+    background-image: none !important; //  Без important не работает в Mozilla FireFox
   }
 
   @include vp-767 {
+    padding-top: 50px;
     padding-bottom: 90px;
   }
 }
 
 .feedback__inner {
   margin-left: auto;
-  max-width: 580px;
+  max-width: 590px;
 
   @include vp-1023 {
     margin-left: 0;
@@ -51,18 +52,18 @@
 .feedback p {
   color: $color-default-white;
   margin-top: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   @include vp-1023 {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 25px;
   }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
   }
 }
 
@@ -77,6 +78,11 @@
 }
 
 .feedback__form textarea {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-black;
   grid-column: 1/-1;
   border: none;
   background: rgba(4, 20, 39, 0.15);
@@ -87,6 +93,8 @@
 
   @include vp-767 {
     margin-bottom: 30px;
+    min-height: 180px;
+    max-height: 190px;
   }
 }
 
@@ -100,6 +108,11 @@
 }
 
 .feedback__form input {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-black;
   border: none;
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
@@ -116,7 +129,7 @@
   border: none;
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     width: 100%;
   }
 }

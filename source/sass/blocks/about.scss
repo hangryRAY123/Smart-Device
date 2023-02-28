@@ -6,6 +6,10 @@
   @include vp-1023 {
     padding-bottom: 80px;
   }
+
+  @include vp-767 {
+    padding-bottom: 75px;
+  }
 }
 
 .about__wrapper {
@@ -17,7 +21,7 @@
     width: 150px;
     height: 320px;
     top: 0;
-    left: 0;
+    left: 20px;
     background-image: image-set(
       url("../../img/year.png") 1x,
       url("../../img/year.webp") 1x
@@ -31,6 +35,11 @@
         url("../../img/year@2x.png") 2x,
         url("../../img/year@2x.webp") 2x
       );
+    }
+
+    @include vp-1023 {
+      top: 5px;
+      left: 45px;
     }
 
     @include vp-767 {
@@ -50,24 +59,23 @@
 .about__inner {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 12px;
   margin-bottom: 20px;
-  max-height: 205px;
+  max-height: 150px;
   overflow: hidden;
 
   @include vp-1023 {
-    max-height: 270px;
+    max-height: 260px;
   }
 
   @include vp-767 {
-    max-height: 205px;
+    max-height: 210px;
   }
 }
 
 .about--more .about__inner {
   max-height: 100%;
   overflow: visible;
-  transition: 1s;
 }
 
 .about__inner p {
@@ -88,6 +96,10 @@
 }
 
 .about p {
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
@@ -95,8 +107,19 @@
 }
 
 .about button {
+  margin-top: 20px;
+  padding: 12px 50px;
   border: 1px solid #00b2ff;
   color: #00b2ff;
+
+  @include vp-1023 {
+    margin-top: 0;
+    padding: 13px 50px;
+  }
+
+  @include vp-767 {
+    padding: 8px 40px;
+  }
 }
 
 .about__btn-collapse {

@@ -40,18 +40,20 @@
 
   @include vp-767 {
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
 .footer__accordions {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  width: 845px;
+  margin-top: 8px;
 
   @include vp-1023 {
     justify-content: space-between;
     width: 100%;
+    margin-top: 0;
   }
 
   @include vp-767 {
@@ -71,9 +73,22 @@
   }
 }
 
+.footer__contacts .footer__list {
+  grid-template-columns: auto;
+  margin-right: 40px;
+
+  @include vp-1023 {
+    margin-right: 15px;
+  }
+}
+
+.footer__nav .footer__list {
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+}
+
 .footer__nav {
   margin-right: auto;
-  width: 400px;
 
   @include vp-1023 {
     width: auto;
@@ -116,12 +131,13 @@
 }
 
 .footer__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  max-height: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 50px;
 
   @include vp-1023 {
+    display: flex;
+    flex-direction: column;
     max-height: 100%;
   }
 
@@ -146,7 +162,7 @@
   font-family: "PT Mono";
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
 
   @include vp-767 {
@@ -173,10 +189,23 @@
   cursor: pointer;
   pointer-events: none;
 
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
   @include vp-767 {
     pointer-events: all;
     width: 100%;
     margin-bottom: 0;
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.5;
+    }
 
     &::before {
       position: absolute;

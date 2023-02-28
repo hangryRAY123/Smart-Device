@@ -5,6 +5,10 @@
   outline: none;
   display: flex;
   align-items: center;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .control__name {

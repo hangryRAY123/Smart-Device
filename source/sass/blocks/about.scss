@@ -56,6 +56,20 @@
   }
 }
 
+.about__wrapper h2 {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-dark;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
 .about__inner {
   display: flex;
   flex-direction: column;
@@ -79,23 +93,18 @@
 }
 
 .about__inner p {
+  font-family: "PT Mono", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-dark;
   margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
   }
-}
 
-.about h2 {
-  color: $color-dark;
-
-  @include vp-767 {
-    font-size: 28px;
-    line-height: 39px;
-  }
-}
-
-.about p {
   @include vp-1023 {
     margin-bottom: 20px;
   }
@@ -106,11 +115,12 @@
   }
 }
 
-.about button {
+.about__btn {
   margin-top: 20px;
   padding: 12px 50px;
   border: 1px solid #00b2ff;
   color: #00b2ff;
+  text-decoration: none;
 
   @include vp-1023 {
     margin-top: 0;

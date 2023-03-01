@@ -40,7 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 100);
   });
 
-  more.addEventListener('click', function () {
+  more.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (about.classList.contains('about--more')) {
       about.classList.remove('about--more');
     } else {

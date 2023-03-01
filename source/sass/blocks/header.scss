@@ -31,12 +31,6 @@
   }
 }
 
-.header__wrapper button {
-  @include vp-1023 {
-    display: none;
-  }
-}
-
 .header__contacts {
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +65,7 @@
 }
 
 .header__link {
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -93,6 +87,10 @@
   }
 }
 
-.header button {
+.header__button {
   margin-right: 60px;
+
+  @include vp-1023 {
+    display: none;
+  }
 }

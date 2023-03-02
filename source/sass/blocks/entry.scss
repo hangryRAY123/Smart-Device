@@ -2,8 +2,8 @@
   color: $color-default-white;
   background-color: #0a446c;
   background-image: image-set(
-    url("../../img/intro-bg.jpg") 1x,
-    url("../../img/intro-bg.webp") 1x
+    url("../../img/entry/intro-bg.jpg") 1x,
+    url("../../img/entry/intro-bg.webp") 1x
   );
   background-repeat: no-repeat;
   background-position: center;
@@ -11,8 +11,8 @@
 
   @include retina {
     background-image: image-set(
-      url("../../img/intro-bg@2x.jpg") 2x,
-      url("../../img/intro-bg@2x.webp") 2x
+      url("../../img/entry/intro-bg@2x.jpg") 2x,
+      url("../../img/entry/intro-bg@2x.webp") 2x
     );
   }
 

@@ -475,7 +475,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+figure {
   margin: 0;
 }
 
@@ -1005,8 +1006,8 @@ button,
 .entry {
   color: #ffffff;
   background-color: #0a446c;
-  background-image: -webkit-image-set(url("../../img/intro-bg.jpg") 1x, url("../../img/intro-bg.webp") 1x);
-  background-image: image-set(url("../../img/intro-bg.jpg") 1x, url("../../img/intro-bg.webp") 1x);
+  background-image: -webkit-image-set(url("../../img/entry/intro-bg.jpg") 1x, url("../../img/entry/intro-bg.webp") 1x);
+  background-image: image-set(url("../../img/entry/intro-bg.jpg") 1x, url("../../img/entry/intro-bg.webp") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1171,24 +1172,6 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.title {
-  font-family: "Roboto Condensed", "Tahoma", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: #ffffff;
-}
-
-.description {
-  font-family: "PT Mono", "Tahoma", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #041827;
-}
-
 .advantages {
   background: #f8fdff;
   color: #000000;
@@ -1255,8 +1238,8 @@ button,
   color: #000000;
   padding-top: 165px;
   padding-bottom: 247px;
-  background-image: -webkit-image-set(url("../../img/feedback-bg.jpg") 1x, url("../../img/feedback-bg.webp") 1x);
-  background-image: image-set(url("../../img/feedback-bg.jpg") 1x, url("../../img/feedback-bg.webp") 1x);
+  background-image: -webkit-image-set(url("../../img/feedback/feedback-bg.jpg") 1x, url("../../img/feedback/feedback-bg.webp") 1x);
+  background-image: image-set(url("../../img/feedback/feedback-bg.jpg") 1x, url("../../img/feedback/feedback-bg.webp") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1470,8 +1453,8 @@ button,
   height: 320px;
   top: 0;
   left: 20px;
-  background-image: -webkit-image-set(url("../../img/year.png") 1x, url("../../img/year.webp") 1x);
-  background-image: image-set(url("../../img/year.png") 1x, url("../../img/year.webp") 1x);
+  background-image: -webkit-image-set(url("../../img/about/year.png") 1x, url("../../img/about/year.webp") 1x);
+  background-image: image-set(url("../../img/about/year.png") 1x, url("../../img/about/year.webp") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1556,7 +1539,7 @@ button,
   margin-bottom: 50px;
 }
 
-.services small {
+.services b {
   display: none;
 }
 
@@ -1572,40 +1555,45 @@ button,
 }
 
 .services__item {
-  width: 29%;
-  background-image: -webkit-image-set(url("../../img/services-bg.jpg") 1x, url("../../img/services-bg.webp") 1x);
-  background-image: image-set(url("../../img/services-bg.jpg") 1x, url("../../img/services-bg.webp") 1x);
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-bottom: 30px;
+  width: 29%;
 }
 
-.services__item--production {
-  background-position: 15% 0;
-}
-
-.services__item--installation {
-  background-position: 50% 0;
-}
-
-.services__item--accessories {
-  background-position: 80% 0;
-}
-
-.services__item a {
+.services__link {
   position: relative;
-  padding: 50px 40px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
-  height: 650px;
+  max-height: 650px;
   width: 100%;
-  background-color: rgba(4, 24, 39, 0.5);
+  overflow: hidden;
 }
 
-.services__item a::after {
+.services__link.focus-visible:focus {
+  opacity: 1;
+}
+
+.services__link:hover img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.services__link::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(4, 24, 39, 0.5);
+  z-index: 1;
+}
+
+.services__link::after {
   position: absolute;
   content: "";
   width: 60px;
@@ -1614,9 +1602,27 @@ button,
   border-radius: 3px 0 0 0;
   bottom: 0;
   right: 0;
+  z-index: 2;
   background-image: url("../../img/svg/jump.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.services__link figcaption {
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  left: 40px;
+}
+
+.services__link img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 650px;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
 }
 
 .footer {
@@ -1934,25 +1940,17 @@ button,
     width: 100%;
   }
 
-  .services__item--production {
-    background-position: 35% 100%;
-    background-size: auto 300%;
+  .services__link {
+    max-height: 250px;
   }
 
-  .services__item--installation {
-    background-position: 80% 50%;
-    background-size: auto 300%;
+  .services__link figcaption {
+    top: 40px;
+    left: 45px;
   }
 
-  .services__item--accessories {
-    background-position: 20% 70%;
-    background-size: auto 300%;
-  }
-
-  .services__item a {
-    padding: 40px 45px;
+  .services__link img {
     height: 250px;
-    width: 100%;
   }
 
   .footer {
@@ -2209,30 +2207,27 @@ button,
     display: none;
   }
 
-  .services small {
+  .services b {
+    font-weight: 400;
     display: block;
   }
 
-  .services__item--production {
-    background-position: 30% 50%;
-  }
-
-  .services__item--installation {
-    background-position: 30% 100%;
-  }
-
-  .services__item--accessories {
-    background-position: 70% 70%;
-  }
-
-  .services__item a::after {
+  .services__link::after {
     width: 40px;
     height: 40px;
   }
 
-  .services__item a {
-    padding: 30px;
+  .services__link {
     font-size: 18px;
+  }
+
+  .services__link figcaption {
+    top: 30px;
+    left: 30px;
+  }
+
+  .services__link img {
+    height: 250px;
   }
 
   .footer {
@@ -2388,26 +2383,25 @@ button,
   .feedback__form-field label:hover:not(.focus-visible) {
     opacity: 0.8;
   }
+
+  .services__link:hover:not(.focus-visible) {
+    opacity: 1;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .entry {
-    background-image: -webkit-image-set(url("../../img/intro-bg@2x.jpg") 2x, url("../../img/intro-bg@2x.webp") 2x);
-    background-image: image-set(url("../../img/intro-bg@2x.jpg") 2x, url("../../img/intro-bg@2x.webp") 2x);
+    background-image: -webkit-image-set(url("../../img/entry/intro-bg@2x.jpg") 2x, url("../../img/entry/intro-bg@2x.webp") 2x);
+    background-image: image-set(url("../../img/entry/intro-bg@2x.jpg") 2x, url("../../img/entry/intro-bg@2x.webp") 2x);
   }
 
   .feedback {
-    background-image: -webkit-image-set(url("../../img/feedback-bg@2x.jpg") 2x, url("../../img/feedback-bg@2x.webp") 2x);
-    background-image: image-set(url("../../img/feedback-bg@2x.jpg") 2x, url("../../img/feedback-bg@2x.webp") 2x);
+    background-image: -webkit-image-set(url("../../img/feedback/feedback-bg@2x.jpg") 2x, url("../../img/feedback/feedback-bg@2x.webp") 2x);
+    background-image: image-set(url("../../img/feedback/feedback-bg@2x.jpg") 2x, url("../../img/feedback/feedback-bg@2x.webp") 2x);
   }
 
   .about__wrapper::before {
-    background-image: -webkit-image-set(url("../../img/year@2x.png") 2x, url("../../img/year@2x.webp") 2x);
-    background-image: image-set(url("../../img/year@2x.png") 2x, url("../../img/year@2x.webp") 2x);
-  }
-
-  .services__item {
-    background-image: -webkit-image-set(url("../../img/services-bg@2x.jpg") 2x, url("../../img/services-bg@2x.webp") 2x);
-    background-image: image-set(url("../../img/services-bg@2x.jpg") 2x, url("../../img/services-bg@2x.webp") 2x);
+    background-image: -webkit-image-set(url("../../img/about/year@2x.png") 2x, url("../../img/about/year@2x.webp") 2x);
+    background-image: image-set(url("../../img/about/year@2x.png") 2x, url("../../img/about/year@2x.webp") 2x);
   }
 }

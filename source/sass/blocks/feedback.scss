@@ -6,8 +6,8 @@
   padding-bottom: 247px;
 
   background-image: image-set(
-    url("../../img/feedback-bg.jpg") 1x,
-    url("../../img/feedback-bg.webp") 1x
+    url("../../img/feedback/feedback-bg.jpg") 1x,
+    url("../../img/feedback/feedback-bg.webp") 1x
   );
   background-repeat: no-repeat;
   background-position: center;
@@ -15,8 +15,8 @@
 
   @include retina {
     background-image: image-set(
-      url("../../img/feedback-bg@2x.jpg") 2x,
-      url("../../img/feedback-bg@2x.webp") 2x
+      url("../../img/feedback/feedback-bg@2x.jpg") 2x,
+      url("../../img/feedback/feedback-bg@2x.webp") 2x
     );
   }
 

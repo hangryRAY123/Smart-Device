@@ -17,6 +17,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const modalControl = document.querySelector('[data-validate="modal-control"]');
   const modalSubmit = document.querySelector('[data-validate="modal-submit"]');
   const modalData = document.querySelector('[data-validate="modal-data"]');
+  const picture = document.querySelectorAll('[data-validate="picture"]');
+
+  picture.forEach((e) => {
+    e.className = '';
+  });
 
   modalControl.addEventListener('click', function () {
     if (modalData.checked) {

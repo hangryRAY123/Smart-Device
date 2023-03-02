@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordions} from './modules/modals/init-accordion';
 import {initPhoneMask} from './modules/modals/phone-mask';
-import {Form} from './modules/form-validate/form';
+import {lazySizes} from './vendor/lazysizes';
 
 // ---------------------------------
 
@@ -49,7 +49,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
   // Utils
   // ---------------------------------
 
@@ -64,9 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initModals();
     initPhoneMask();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    lazySizes();
   });
 });
 

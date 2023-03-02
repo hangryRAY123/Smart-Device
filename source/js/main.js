@@ -23,6 +23,11 @@ window.addEventListener('DOMContentLoaded', () => {
     e.className = '';
   });
 
+  submit.disabled = 'disabled';
+  modalSubmit.disabled = 'disabled';
+  data.checked = '';
+  data.disabled = '';
+
   modalControl.addEventListener('click', function () {
     if (modalData.checked) {
       modalSubmit.disabled = '';

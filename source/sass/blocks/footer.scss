@@ -44,6 +44,10 @@
   }
 }
 
+.footer__inner img {
+  min-width: 215px;
+}
+
 .footer__accordions {
   display: flex;
   flex-wrap: wrap;
@@ -103,7 +107,6 @@
 .footer__contacts {
   @include vp-767 {
     position: relative;
-    padding: 20px 0;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
 
     &::before {
@@ -142,7 +145,7 @@
   }
 
   @include vp-767 {
-    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -181,6 +184,7 @@
   color: $color-default-white;
   display: flex;
   justify-content: start;
+  align-items: center;
   position: relative;
   margin-bottom: 20px;
   padding: 0;
@@ -195,6 +199,7 @@
 
   @include vp-767 {
     pointer-events: all;
+    padding: 20px 0;
     width: 100%;
     margin-bottom: 0;
 
@@ -213,7 +218,7 @@
       right: 0;
       width: 15px;
       height: 1px;
-      top: 7px;
+      top: 50%;
       background-color: #c4c4c4;
     }
 
@@ -223,7 +228,7 @@
       width: 15px;
       height: 1px;
       right: 0;
-      top: 7px;
+      top: 50%;
       background-color: #c4c4c4;
       transform: rotate(90deg);
     }
@@ -231,5 +236,13 @@
 }
 
 .is-active .footer__accordion-btn::after {
+  display: none;
+}
+
+.footer__accordions--no-js [data-accordion="content"] {
+  max-height: 100%;
+}
+
+.footer__accordions--no-js .footer__accordion-btn::after {
   display: none;
 }

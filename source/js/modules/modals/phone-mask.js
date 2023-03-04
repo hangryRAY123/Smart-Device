@@ -3,6 +3,11 @@ const COUNTRY_CODE = '+7';
 const length = COUNTRY_CODE.length;
 
 const replacePhoneValue = (el) => {
+  if (el.value.length < 18) {
+    el.setCustomValidity('Номер введен не полностью');
+  } else {
+    el.setCustomValidity('');
+  }
   const matrix = `${COUNTRY_CODE} (___) ___ __ __`;
   const def = matrix.replace(/\D/g, '');
   let i = 0;

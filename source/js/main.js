@@ -18,6 +18,26 @@ window.addEventListener('DOMContentLoaded', () => {
   const modalSubmit = document.querySelector('[data-validate="modal-submit"]');
   const modalData = document.querySelector('[data-validate="modal-data"]');
   const picture = document.querySelectorAll('[data-validate="picture"]');
+  const media = window.matchMedia('(max-width: 767px)');
+  const accordionBtn = document.querySelectorAll('[data-accordion="button"]');
+  const parentAccordion = document.querySelector('[data-accordion="parent"]');
+
+  parentAccordion.classList.remove('footer__accordions--no-js');
+
+  const changeMedia = () => {
+    if (media.matches) {
+      accordionBtn.forEach((e) => {
+        e.disabled = '';
+      });
+    } else {
+      accordionBtn.forEach((e) => {
+        e.disabled = 'disabled';
+      });
+    }
+  };
+
+  changeMedia(media);
+  media.addEventListener('change', changeMedia);
 
   picture.forEach((e) => {
     e.className = '';
@@ -27,6 +47,8 @@ window.addEventListener('DOMContentLoaded', () => {
   modalSubmit.disabled = 'disabled';
   data.checked = '';
   data.disabled = '';
+  modalData.checked = '';
+  modalData.disabled = '';
 
   modalControl.addEventListener('click', function () {
     if (modalData.checked) {

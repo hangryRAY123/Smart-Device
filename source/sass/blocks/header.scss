@@ -31,6 +31,16 @@
   }
 }
 
+.header__wrapper img {
+  min-width: 215px;
+
+  @include vp-767 {
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .header__contacts {
   display: flex;
   flex-wrap: wrap;

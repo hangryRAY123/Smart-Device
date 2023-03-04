@@ -10,30 +10,29 @@
     />
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="img/favicon/favicon-16x16.png" type="image/png" />
     <link rel="icon" href="img/favicon/favicon-16x16.webp" type="image/webp" />
-    <link rel="icon" href="img/favicon/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="img/favicon/favicon-16x16.png" type="image/png" />
     <link rel="icon" href="img/favicon/favicon-32x32.webp" type="image/webp" />
+    <link rel="icon" href="img/favicon/favicon-32x32.png" type="image/png" />
     <link
       rel="apple-touch-icon"
-      href="img/favicon-152x152.png"
-      type="image/png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="img/favicon-152x152.webp"
+      href="img/favicon/favicon-152x152.webp"
       type="image/webp"
     />
     <link
-      rel="preload"
+      rel="apple-touch-icon"
+      href="img/favicon/favicon-152x152.png"
+      type="image/png"
+    />
+    <link
+      rel="prefetch"
       href="fonts/PTMono-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
     />
     <link
-      rel="preload"
+      rel="prefetch"
       href="fonts/RobotoCondensed-Regular.woff2"
       as="font"
       type="font/woff2"
@@ -46,16 +45,34 @@
 
       <header class="header">
         <div class="header__wrapper container">
-          <a class="logo" href="index.html">
-            <span class="visually-hidden">Логотип Smart Device.</span>
-            <svg aria-hidden="true" focusable="false" width="55" height="55">
-              <use href="img/sprite.svg#logo"></use>
-            </svg>
-            <div class="logo__text">
-              <b>Smart Device</b>
-              <span>умные технологии</span>
-            </div>
-          </a>
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              type="image/webp"
+              srcset="
+                img/logo/logo-mobile.webp    1x,
+                img/logo/logo-mobile@2x.webp 2x
+              "
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                img/logo/logo-mobile.png    1x,
+                img/logo/logo-mobile@2x.png 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="img/logo/logo.webp 1x, img/logo/logo@2x.webp 2x"
+            />
+            <img
+              src="img/logo/logo.png"
+              srcset="img/logo/logo.png 1x, img/logo/logo@2x.png 2x"
+              width="215"
+              height="55"
+              alt="Логотип Smart Device."
+            />
+          </picture>
           <ul class="header__contacts">
             <li class="header__item">
               <a class="header__link" href="mailto:info@sd.ru">
@@ -246,14 +263,10 @@
               <li class="services__item">
                 <a class="services__link" href="#"
                   ><figure>
-                    <picture class="services__picture photo" data-validate="picture">
-                      <source
-                        media="(max-width: 767px)"
-                        data-srcset="
-                          img/services/services-mobile-1.jpg    1x,
-                          img/services/services-mobile-1@2x.jpg 2x
-                        "
-                      />
+                    <picture
+                      class="services__picture photo"
+                      data-validate="picture"
+                    >
                       <source
                         media="(max-width: 767px)"
                         type="image/webp"
@@ -263,10 +276,10 @@
                         "
                       />
                       <source
-                        media="(max-width: 1023px)"
+                        media="(max-width: 767px)"
                         data-srcset="
-                          img/services/services-tablet-1.jpg    1x,
-                          img/services/services-tablet-1@2x.jpg 2x
+                          img/services/services-mobile-1.jpg    1x,
+                          img/services/services-mobile-1@2x.jpg 2x
                         "
                       />
                       <source
@@ -275,6 +288,13 @@
                         data-srcset="
                           img/services/services-tablet-1.webp    1x,
                           img/services/services-tablet-1@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1023px)"
+                        data-srcset="
+                          img/services/services-tablet-1.jpg    1x,
+                          img/services/services-tablet-1@2x.jpg 2x
                         "
                       />
                       <source
@@ -301,13 +321,6 @@
                       <picture>
                         <source
                           media="(max-width: 767px)"
-                          srcset="
-                            img/services/services-mobile-1.jpg    1x,
-                            img/services/services-mobile-1@2x.jpg 2x
-                          "
-                        />
-                        <source
-                          media="(max-width: 767px)"
                           type="image/webp"
                           srcset="
                             img/services/services-mobile-1.webp    1x,
@@ -315,10 +328,10 @@
                           "
                         />
                         <source
-                          media="(max-width: 1023px)"
+                          media="(max-width: 767px)"
                           srcset="
-                            img/services/services-tablet-1.jpg    1x,
-                            img/services/services-tablet-1@2x.jpg 2x
+                            img/services/services-mobile-1.jpg    1x,
+                            img/services/services-mobile-1@2x.jpg 2x
                           "
                         />
                         <source
@@ -327,6 +340,13 @@
                           srcset="
                             img/services/services-tablet-1.webp    1x,
                             img/services/services-tablet-1@2x.webp 2x
+                          "
+                        />
+                        <source
+                          media="(max-width: 1023px)"
+                          srcset="
+                            img/services/services-tablet-1.jpg    1x,
+                            img/services/services-tablet-1@2x.jpg 2x
                           "
                         />
                         <source
@@ -346,6 +366,7 @@
                           height="650"
                           alt="Печатная плата."
                         />
+                      </picture>
                     </noscript>
                     <figcaption>
                       Производство <br />
@@ -357,14 +378,10 @@
               <li class="services__item">
                 <a class="services__link" href="#"
                   ><figure>
-                    <picture class="services__picture photo" data-validate="picture">
-                      <source
-                        media="(max-width: 767px)"
-                        data-srcset="
-                          img/services/services-mobile-2.jpg    1x,
-                          img/services/services-mobile-2@2x.jpg 2x
-                        "
-                      />
+                    <picture
+                      class="services__picture photo"
+                      data-validate="picture"
+                    >
                       <source
                         media="(max-width: 767px)"
                         type="image/webp"
@@ -374,10 +391,10 @@
                         "
                       />
                       <source
-                        media="(max-width: 1023px)"
+                        media="(max-width: 767px)"
                         data-srcset="
-                          img/services/services-tablet-2.jpg    1x,
-                          img/services/services-tablet-2@2x.jpg 2x
+                          img/services/services-mobile-2.jpg    1x,
+                          img/services/services-mobile-2@2x.jpg 2x
                         "
                       />
                       <source
@@ -386,6 +403,13 @@
                         data-srcset="
                           img/services/services-tablet-2.webp    1x,
                           img/services/services-tablet-2@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1023px)"
+                        data-srcset="
+                          img/services/services-tablet-2.jpg    1x,
+                          img/services/services-tablet-2@2x.jpg 2x
                         "
                       />
                       <source
@@ -412,13 +436,6 @@
                       <picture>
                         <source
                           media="(max-width: 767px)"
-                          srcset="
-                            img/services/services-mobile-2.jpg    1x,
-                            img/services/services-mobile-2@2x.jpg 2x
-                          "
-                        />
-                        <source
-                          media="(max-width: 767px)"
                           type="image/webp"
                           srcset="
                             img/services/services-mobile-2.webp    1x,
@@ -426,10 +443,10 @@
                           "
                         />
                         <source
-                          media="(max-width: 1023px)"
+                          media="(max-width: 767px)"
                           srcset="
-                            img/services/services-tablet-2.jpg    1x,
-                            img/services/services-tablet-2@2x.jpg 2x
+                            img/services/services-mobile-2.jpg    1x,
+                            img/services/services-mobile-2@2x.jpg 2x
                           "
                         />
                         <source
@@ -438,6 +455,13 @@
                           srcset="
                             img/services/services-tablet-2.webp    1x,
                             img/services/services-tablet-2@2x.webp 2x
+                          "
+                        />
+                        <source
+                          media="(max-width: 1023px)"
+                          srcset="
+                            img/services/services-tablet-2.jpg    1x,
+                            img/services/services-tablet-2@2x.jpg 2x
                           "
                         />
                         <source
@@ -457,6 +481,7 @@
                           height="650"
                           alt="Печатная плата."
                         />
+                      </picture>
                     </noscript>
                     <figcaption>
                       Монтаж <br />
@@ -468,14 +493,10 @@
               <li class="services__item">
                 <a class="services__link" href="#"
                   ><figure>
-                    <picture class="services__picture photo" data-validate="picture">
-                      <source
-                        media="(max-width: 767px)"
-                        data-srcset="
-                          img/services/services-mobile-3.jpg    1x,
-                          img/services/services-mobile-3@2x.jpg 2x
-                        "
-                      />
+                    <picture
+                      class="services__picture photo"
+                      data-validate="picture"
+                    >
                       <source
                         media="(max-width: 767px)"
                         type="image/webp"
@@ -485,10 +506,10 @@
                         "
                       />
                       <source
-                        media="(max-width: 1023px)"
+                        media="(max-width: 767px)"
                         data-srcset="
-                          img/services/services-tablet-3.jpg    1x,
-                          img/services/services-tablet-3@2x.jpg 2x
+                          img/services/services-mobile-3.jpg    1x,
+                          img/services/services-mobile-3@2x.jpg 2x
                         "
                       />
                       <source
@@ -498,6 +519,13 @@
                           img/services/services-tablet-3.webp    1x,
                           img/services/services-tablet-3@2x.webp 2x
                         "
+                      />
+                      <source
+                        media="(max-width: 1023px)"
+                        data-srcset="
+                        img/services/services-tablet-3.jpg    1x,
+                        img/services/services-tablet-3@2x.jpg 2x
+                      "
                       />
                       <source
                         type="image/webp"
@@ -523,13 +551,6 @@
                       <picture>
                         <source
                           media="(max-width: 767px)"
-                          srcset="
-                            img/services/services-mobile-3.jpg    1x,
-                            img/services/services-mobile-3@2x.jpg 2x
-                          "
-                        />
-                        <source
-                          media="(max-width: 767px)"
                           type="image/webp"
                           srcset="
                             img/services/services-mobile-3.webp    1x,
@@ -537,10 +558,10 @@
                           "
                         />
                         <source
-                          media="(max-width: 1023px)"
+                          media="(max-width: 767px)"
                           srcset="
-                            img/services/services-tablet-3.jpg    1x,
-                            img/services/services-tablet-3@2x.jpg 2x
+                            img/services/services-mobile-3.jpg    1x,
+                            img/services/services-mobile-3@2x.jpg 2x
                           "
                         />
                         <source
@@ -549,6 +570,13 @@
                           srcset="
                             img/services/services-tablet-3.webp    1x,
                             img/services/services-tablet-3@2x.webp 2x
+                          "
+                        />
+                        <source
+                          media="(max-width: 1023px)"
+                          srcset="
+                            img/services/services-tablet-3.jpg    1x,
+                            img/services/services-tablet-3@2x.jpg 2x
                           "
                         />
                         <source
@@ -568,6 +596,7 @@
                           height="650"
                           alt="Печатная плата."
                         />
+                      </picture>
                     </noscript>
                     <figcaption>
                       Комплектующие <br />
@@ -601,6 +630,7 @@
                     name="phone-number"
                     aria-label="Телефон"
                     placeholder="Телефон"
+                    minlength="12"
                     required
                   />
                   <textarea
@@ -610,25 +640,25 @@
                     cols="30"
                     rows="5"
                   ></textarea>
-                  <button
-                    class="btn"
-                    type="submit"
-                    data-validate="submit"
-                  >
-                    Задать вопрос
-                  </button>
-                  <div class="feedback__form-field">
-                    <label data-validate="control">
-                      <input
-                        type="checkbox"
-                        name="I agree to the processing of personal data"
-                        data-validate="data"
-                        checked
-                        disabled
-                      />
-                      <span tabindex="0"></span>
-                      <small>Я согласен на обработку персональных данных</small>
-                    </label>
+                  <div class="feedback__form-btn">
+                    <div class="feedback__form-field">
+                      <label data-validate="control">
+                        <input
+                          type="checkbox"
+                          name="I agree to the processing of personal data"
+                          data-validate="data"
+                          checked
+                          disabled
+                        />
+                        <span tabindex="0"></span>
+                        <small
+                          >Я согласен на обработку персональных данных</small
+                        >
+                      </label>
+                    </div>
+                    <button class="btn" type="submit" data-validate="submit">
+                      Задать вопрос
+                    </button>
                   </div>
                 </div>
               </form>
@@ -641,16 +671,19 @@
       <footer class="footer">
         <div class="footer__wrapper container">
           <div class="footer__inner">
-            <a class="logo logo--footer" href="index.html">
-              <span class="visually-hidden">Логотип Smart Device.</span>
-              <svg aria-hidden="true" focusable="false" width="55" height="55">
-                <use href="img/sprite.svg#logo"></use>
-              </svg>
-              <div class="logo__text">
-                <b>Smart Device</b>
-                <span>умные технологии</span>
-              </div>
-            </a>
+            <picture>
+              <source
+                type="image/webp"
+                srcset="img/logo/logo.webp 1x, img/logo/logo@2x.webp 2x"
+              />
+              <img
+                src="img/logo/logo.png"
+                srcset="img/logo/logo.png 1x, img/logo/logo@2x.png 2x"
+                width="215"
+                height="55"
+                alt="Логотип Smart Device."
+              />
+            </picture>
             <ul class="footer__social social">
               <li class="social__item">
                 <a href="#" class="social__link"
@@ -693,12 +726,17 @@
               </li>
             </ul>
           </div>
-          <div class="footer__accordions" data-accordion="parent" data-single>
+          <div
+            class="footer__accordions footer__accordions--no-js"
+            data-accordion="parent"
+            data-single
+          >
             <div class="footer__nav" data-accordion="element">
               <button
                 class="footer__accordion-btn"
                 data-accordion="button"
                 type="button"
+                disabled
               >
                 Разделы сайта
               </button>
@@ -736,6 +774,7 @@
                 class="footer__accordion-btn"
                 data-accordion="button"
                 type="button"
+                disabled
               >
                 Наш офис
               </button>
@@ -788,6 +827,7 @@
                 aria-label="Имя"
                 placeholder="Имя"
                 data-validate="name"
+                minlength="12"
                 required
               />
               <input
@@ -804,25 +844,23 @@
                 cols="30"
                 rows="10"
               ></textarea>
-              <button
-                class="btn"
-                type="submit"
-                data-validate="modal-submit"
-              >
-                Отправить
-              </button>
-              <div class="modal__form-field">
-                <label data-validate="modal-control">
-                  <input
-                    type="checkbox"
-                    name="I agree to the processing of personal data"
-                    data-validate="modal-data"
-                    checked
-                    disabled
-                  />
-                  <span tabindex="0"></span>
-                  <small>Я согласен на обработку персональных данных</small>
-                </label>
+              <div class="modal__form-btn">
+                <div class="modal__form-field">
+                  <label data-validate="modal-control">
+                    <input
+                      type="checkbox"
+                      name="I agree to the processing of personal data"
+                      data-validate="modal-data"
+                      checked
+                      disabled
+                    />
+                    <span tabindex="0"></span>
+                    <small>Я согласен на обработку персональных данных</small>
+                  </label>
+                </div>
+                <button class="btn" type="submit" data-validate="modal-submit">
+                  Отправить
+                </button>
               </div>
             </div>
           </form>

@@ -451,6 +451,10 @@ a {
   display: block;
   color: #000000;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a.focus-visible:focus {
@@ -496,6 +500,10 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input::-webkit-input-placeholder,
@@ -585,6 +593,10 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -1220,8 +1232,8 @@ button,
   color: #000000;
   padding-top: 165px;
   padding-bottom: 247px;
-  background-image: -webkit-image-set(url("../img/feedback/feedback-bg.webp") 1x, url("../img/feedback/feedback-bg.jpeg") 1x);
-  background-image: image-set(url("../img/feedback/feedback-bg.webp") 1x, url("../img/feedback/feedback-bg.jpeg") 1x);
+  background-image: -webkit-image-set(url("../img/feedback/feedback-bg.webp") 1x, url("../img/feedback/feedback-bg.jpg") 1x);
+  background-image: image-set(url("../img/feedback/feedback-bg.webp") 1x, url("../img/feedback/feedback-bg.jpg") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1528,7 +1540,7 @@ button,
   background-color: #041827;
   color: #ffffff;
   padding-top: 70px;
-  padding-bottom: 110px;
+  padding-bottom: 140px;
 }
 
 .services h2 {
@@ -1546,19 +1558,14 @@ button,
 }
 
 .services__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.services__item {
-  margin-bottom: 30px;
-  width: 29%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 85px;
+  -moz-column-gap: 85px;
+  column-gap: 85px;
+  row-gap: 30px;
 }
 
 .services__link {
@@ -1953,7 +1960,7 @@ button,
 
   .services {
     padding-top: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
   .services h2 {
@@ -1961,14 +1968,8 @@ button,
   }
 
   .services__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .services__item {
-    width: 100%;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .services__link {
@@ -2220,7 +2221,7 @@ button,
 
   .services {
     padding-top: 45px;
-    padding-bottom: 55px;
+    padding-bottom: 85px;
   }
 
   .services h2 {

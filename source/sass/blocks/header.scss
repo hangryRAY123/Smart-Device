@@ -14,7 +14,6 @@
 
 .header__wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
@@ -90,6 +89,11 @@
   @include vp-1023 {
     padding: 10px;
   }
+}
+
+.header__link svg {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .header__link-text {

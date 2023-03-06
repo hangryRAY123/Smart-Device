@@ -45,9 +45,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 550px;
+  max-width: 500px;
 
   @include vp-1023 {
+    max-width: 150px;
     margin-right: 20px;
   }
 
@@ -57,14 +58,16 @@
 }
 
 .header__item {
-  margin-right: 120px;
+  margin-right: 40px;
   margin-bottom: 5px;
+  min-width: 210px;
 
   &:last-child {
     margin-right: 0;
   }
 
   @include vp-1023 {
+    min-width: 40px;
     margin-right: 20px;
     margin-bottom: 15px;
   }

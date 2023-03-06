@@ -832,6 +832,7 @@ button,
   color: #000000;
   width: 500px;
   padding: 40px;
+  border-radius: 3px;
 }
 
 .modal__content h2 {
@@ -848,9 +849,8 @@ button,
   font-style: normal;
   font-weight: 400;
   color: #ffffff;
-  font-size: 14px;
-  line-height: 19px;
-  margin-top: 15px;
+  font-size: 16px;
+  line-height: 22px;
   margin-bottom: 40px;
 }
 
@@ -865,7 +865,7 @@ button,
   border: none;
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 25px 15px;
   max-height: 155px;
 }
@@ -919,7 +919,7 @@ button,
   border: none;
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
-  padding: 15px;
+  padding: 13px;
   margin-bottom: 20px;
 }
 
@@ -929,7 +929,7 @@ button,
   padding: 15px 25px;
   background: #041427;
   border: none;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   width: 100%;
 }
 
@@ -1131,12 +1131,13 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 550px;
+  max-width: 500px;
 }
 
 .header__item {
-  margin-right: 120px;
+  margin-right: 40px;
   margin-bottom: 5px;
+  min-width: 210px;
 }
 
 .header__item:last-child {
@@ -1666,8 +1667,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   width: 845px;
   margin-top: 8px;
 }
@@ -1676,34 +1675,79 @@ button,
   margin-top: 35px;
 }
 
+.footer__contacts {
+  margin-left: 20px;
+}
+
 .footer__contacts .footer__list {
-  -ms-grid-columns: auto;
-  grid-template-columns: auto;
-  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 347px;
 }
 
 .footer__nav .footer__list {
-  grid-auto-flow: column;
-  -ms-grid-rows: (auto)[4];
-  grid-template-rows: repeat(4, auto);
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 45px;
+  -moz-column-gap: 45px;
+  column-gap: 45px;
+  -ms-grid-columns: (205px)[2];
+  grid-template-columns: repeat(2, 205px);
 }
 
 .footer__nav {
   margin-right: auto;
 }
 
-.footer__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (auto)[2];
-  grid-template-columns: repeat(2, auto);
-  -webkit-column-gap: 50px;
-  -moz-column-gap: 50px;
-  column-gap: 50px;
-}
-
 .footer__item {
   margin-bottom: 10px;
+}
+
+.footer__item--about {
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.footer__item--acessories {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.footer__item--products {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.footer__item--delivery {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.footer__item--production {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.footer__item--contacts {
+  -webkit-box-ordinal-group: 6;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.footer__item--installation {
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
+  order: 6;
 }
 
 .footer__item:last-child {
@@ -1716,6 +1760,11 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__link--text {
+  display: block;
+  line-height: 22px;
 }
 
 .footer__accordion-btn {
@@ -1872,10 +1921,12 @@ button,
   }
 
   .header__contacts {
+    max-width: 150px;
     margin-right: 20px;
   }
 
   .header__item {
+    min-width: 40px;
     margin-right: 20px;
     margin-bottom: 15px;
   }
@@ -2024,23 +2075,36 @@ button,
     margin-top: 0;
   }
 
+  .footer__contacts {
+    margin-left: 0;
+  }
+
   .footer__contacts .footer__list {
-    margin-right: 15px;
+    max-width: 320px;
+  }
+
+  .footer__nav .footer__list {
+    -ms-grid-columns: 205px;
+    grid-template-columns: 205px;
   }
 
   .footer__nav {
     width: auto;
   }
 
-  .footer__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-height: 100%;
+  .footer__item--acessories,
+  .footer__item--products,
+  .footer__item--delivery,
+  .footer__item--production,
+  .footer__item--contacts,
+  .footer__item--installation {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+
+  .footer__link--text {
+    line-height: 20px;
   }
 
   .footer__accordion-btn {
@@ -2284,6 +2348,15 @@ button,
     margin-top: 20px;
   }
 
+  .footer__contacts .footer__list {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .footer__nav .footer__list {
+    padding-bottom: 20px;
+  }
+
   .footer__nav {
     width: 100%;
   }
@@ -2316,10 +2389,6 @@ button,
     background-color: rgba(248, 253, 255, 0.7);
     right: 100%;
     width: calc((100vw - 100%) / 2);
-  }
-
-  .footer__list {
-    padding-bottom: 20px;
   }
 
   .footer__item {
